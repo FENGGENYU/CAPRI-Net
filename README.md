@@ -23,17 +23,17 @@ Pre-training the network:
 python train.py -e {experiment_name} -g {gpu_id} -p 0
 ```
 
-Fine-tuning the network:
+Fine-tuning the network.
 For voxel input
 ```
-python fine-tuning.py -e {experiment_name} -g {gpu_id} --test --voxel --start 0 --end 1
+python fine-tuning.py -e {experiment_name} -g {gpu_id} --test --voxel --start {start_index} --end {end_index}
 ```
-For point cloud input, please change --voxel to --surface
+For point cloud input, please change --voxel to --surface, for example:
 ```
 python fine-tuning.py -e {experiment_name} -g {gpu_id} --test --surface --start 0 --end 1
 ```
 
-Testing for each shape:
+Testing for each shape, example is below:
 ```
 python test.py -e {experiment_name} -g {gpu_id} -p 2 -c best_stage2 --test --voxel --start 0 --end 1 
 ```
