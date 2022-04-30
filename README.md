@@ -1,5 +1,5 @@
 # CAPRI-Net
-Early version of released codes for CAPRI-Net, Please see [project page](https://fenggenyu.github.io/capri.html).
+Early version of released codes for CAPRI-Net(CAPRI-Net: Learning Compact CAD Shapes with Adaptive Primitive Assembly), Please see [project page](https://fenggenyu.github.io/capri.html).
 
 More processed data and pre-trained weights will coming soon. Please leave your questions in issue page.
 
