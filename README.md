@@ -16,6 +16,8 @@ Point sampling methods are adopted from [IM-Net](https://github.com/czq142857/IM
 
 Please download processed data from [here](https://drive.google.com/file/d/1fvuTvW5uKIUq3OF9Ybp3mwnjOPvtQRVC/view?usp=sharing) and pre-trained weights from [here](https://drive.google.com/drive/folders/1Mh5ngnlhi1OqNh0DG1KpZhAQKn5dNa7M?usp=sharing).
 
+The config file spec.json needs to placed in the folder of each experiment.
+
 ### Usage
 
 Pre-training the network:
@@ -49,3 +51,7 @@ url = {https://arxiv.org/abs/2104.05652},
 biburl = {https://dblp.org/rec/journals/corr/abs-2104-05652.bib},
 }
 ```
+
+## Code Reference
+
+The framework of this repository is adopted from [DeepSDF](https://github.com/facebookresearch/DeepSDF)
