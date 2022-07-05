@@ -43,12 +43,13 @@ python test.py -e {experiment_name} -g {gpu_id} -p 2 -c best_stage2 --test --vox
 ## Citation
 If you use this code, please cite the following paper.
 ```
-@article{Capri_Yu,
-author = {Fenggen Yu and Zhiqin Chen and Manyi Li and Aditya Sanghi and Hooman Shayani and Ali Mahdavi{-}Amiri and Hao Zhang},
-title = {CAPRI-Net: Learning Compact CAD Shapes with Adaptive Primitive Assembly},
-year = {2021},
-url = {https://arxiv.org/abs/2104.05652},
-biburl = {https://dblp.org/rec/journals/corr/abs-2104-05652.bib},
+@InProceedings{Yu_2022_CVPR,
+    author    = {Yu, Fenggen and Chen, Zhiqin and Li, Manyi and Sanghi, Aditya and Shayani, Hooman and Mahdavi-Amiri, Ali and Zhang, Hao},
+    title     = {CAPRI-Net: Learning Compact CAD Shapes With Adaptive Primitive Assembly},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2022},
+    pages     = {11768-11778}
 }
 ```
 
