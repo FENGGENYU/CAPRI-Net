@@ -175,7 +175,7 @@ if __name__ == "__main__":
 
 	count = 0
 	
-	#start_indexes = [809, 1173, 1488, 2988, 4344, 4563, 5027, 5351, 5826, 6461, 8163, 8374]
+	#start_indexes = [809, 1173, 1488, 2988, 4344, 4563, 5028, 5351, 5826, 6461, 8163, 8374]
 	avarage_primitive_count = 0
 	avarage_convex_count = 0
 
