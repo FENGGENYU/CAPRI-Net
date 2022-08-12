@@ -1,7 +1,7 @@
 # CAPRI-Net
-Early version of released codes for CAPRI-Net(CAPRI-Net: Learning Compact CAD Shapes with Adaptive Primitive Assembly), Please see [project page](https://fenggenyu.github.io/capri.html).
+Codes for CAPRI-Net(CAPRI-Net: Learning Compact CAD Shapes with Adaptive Primitive Assembly), Please see [project page](https://fenggenyu.github.io/capri.html).
 
-More processed data and pre-trained weights will coming soon. Please leave your questions in issue page.
+Please leave your questions in issue page.
 
 ### Dependencies
 
@@ -10,6 +10,9 @@ Requirements:
 
 Please use environment.yml to install conda environment.
 
+## News
+***Aug 11, 2022.*** More [processed data](https://drive.google.com/file/d/1rANlqwGGBqY5Ih0GHhAd3VG_SZlhhOmi/view?usp=sharing) and [pre-trained weights](https://drive.google.com/file/d/1RU1IY_HOHDhc9APb9r4GcsxZkiwmJkCc/view?usp=sharing) are provided.
+
 ## Datasets and Pre-trained weights
 
 Point sampling methods are adopted from [IM-Net](https://github.com/czq142857/IM-NET) and [If-Net](https://github.com/jchibane/if-net)
@@ -17,6 +20,8 @@ Point sampling methods are adopted from [IM-Net](https://github.com/czq142857/IM
 Please download processed data from [here](https://drive.google.com/file/d/1fvuTvW5uKIUq3OF9Ybp3mwnjOPvtQRVC/view?usp=sharing) and pre-trained weights from [here](https://drive.google.com/drive/folders/1Mh5ngnlhi1OqNh0DG1KpZhAQKn5dNa7M?usp=sharing).
 
 The config file spec.json needs to placed in the folder of each experiment.
+
+
 
 ### Usage
 
