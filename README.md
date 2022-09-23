@@ -11,6 +11,8 @@ Requirements:
 Please use environment.yml to install conda environment.
 
 ## News
+***Sep 22, 2022.*** Update additional files for testing pre-trained model. Note the pre-trained results are much worse than fine-tuned results.
+
 ***Aug 11, 2022.*** More [processed data](https://drive.google.com/file/d/1rANlqwGGBqY5Ih0GHhAd3VG_SZlhhOmi/view?usp=sharing) and [pre-trained weights](https://drive.google.com/file/d/1RU1IY_HOHDhc9APb9r4GcsxZkiwmJkCc/view?usp=sharing) are provided.
 
 ## Datasets and Pre-trained weights
@@ -40,9 +42,14 @@ For point cloud input, please change --voxel to --surface, for example:
 python fine-tuning.py -e {experiment_name} -g {gpu_id} --test --surface --start 0 --end 1
 ```
 
-Testing for each shape, example is below:
+Testing fine-tuned model for each shape, example is below:
 ```
 python test.py -e {experiment_name} -g {gpu_id} -p 2 -c best_stage2 --test --voxel --start 0 --end 1 
+```
+
+Testing for pre-trained model, example is below:
+```
+python test_pretrain.py -e {experiment_name} -g {gpu_id} -p 0 -c initial --test --voxel --start 0 --end 1 --mc_threshold 0.5
 ```
 
 ## Citation

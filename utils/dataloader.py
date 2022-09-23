@@ -18,7 +18,7 @@ class SurfaceSamples(torch.utils.data.Dataset):
 		print('class SurfaceSamples for point cloud reconstruction')
 		self.data_source = data_source
 
-		name_file = os.path.join(self.data_source, 'names.npz')
+		name_file = os.path.join(self.data_source, 'test_names.npz')
 		npz_shapes = np.load(name_file)
 
 		if test_flag:
