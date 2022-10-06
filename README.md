@@ -46,6 +46,7 @@ Testing fine-tuned model for each shape, example is below:
 ```
 python test.py -e {experiment_name} -g {gpu_id} -p 2 -c best_stage2 --test --voxel --start 0 --end 1 
 ```
+If you want to get the CSG output as Figure 3 of our paper, please add --csg to above command.
 
 Testing for pre-trained model, example is below:
 ```
