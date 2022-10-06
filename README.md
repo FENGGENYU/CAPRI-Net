@@ -10,6 +10,8 @@ Requirements:
 
 Please use environment.yml to install conda environment.
 
+Tested environment: please check environment.yaml file
+
 ## News
 ***Sep 22, 2022.*** Update additional files for testing pre-trained model. Note the pre-trained results are much worse than fine-tuned results.
 
