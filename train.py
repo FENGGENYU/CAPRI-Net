@@ -206,6 +206,7 @@ def main_function(experiment_directory, continue_from, phase, grid_sample, leaky
 			},
 		]
 	)
+	start_epoch = 0
 	if continue_from is not None:
 
 		logging.info('continuing from "{}"'.format(continue_from))
@@ -223,13 +224,13 @@ def main_function(experiment_directory, continue_from, phase, grid_sample, leaky
 
 	logging.info("starting from epoch {}".format(start_epoch))
 	logging.info(f"Training, expriment {experiment_directory}, batch size {scene_per_batch}, phase {phase}, \
-		grid_sample {grid_sample}, leaky {leaky} , shapenet_flag {shapenet_flag}, no weight {no_weight}")
+		grid_sample {grid_sample}, leaky {leaky} , shapenet_flag {shapenet_flag}")
 	decoder.train()
 	encoder.train()
 	generator.train()
 
 	start_time = time.time()
-	start_epoch = 0
+	
 	last_epoch_time = 0
 
 	point_batch_size = 16*16*16*2
@@ -269,8 +270,8 @@ def main_function(experiment_directory, continue_from, phase, grid_sample, leaky
 			primitives = decoder(shape_code)
 
 			G_left, G_right, net_out, net_out_convexes = generator(xyz, primitives, phase, leaky)
-			value_loss_left, value_loss_right, total_loss = loss(shapenet_flag, phase, G_left, G_right, occ_gt, 
-				generator.concave_layer_weights, generator.convex_layer_weights, no_weight)
+			value_loss_left, value_loss_right, total_loss = loss(phase, G_left, G_right, occ_gt, 
+				generator.concave_layer_weights, generator.convex_layer_weights)
 					
 			total_loss.backward()
 			optimizer_all.step()
@@ -282,14 +283,13 @@ def main_function(experiment_directory, continue_from, phase, grid_sample, leaky
 
 		if (epoch+1) % 1 == 0:
 			seconds_elapsed = time.time() - start_time
-			ava_epoch_time = (seconds_elapsed - last_epoch_time)/10
+			ava_epoch_time = (seconds_elapsed - last_epoch_time)/1
 			left_time = ava_epoch_time*(num_epochs+ start_epoch- epoch)/3600
 			last_epoch_time = seconds_elapsed
 			left_loss = avarage_left_loss/avarage_num
 			right_loss = avarage_right_loss/avarage_num
 			t_loss = avarage_total_loss/avarage_num
-			logging.debug("epoch = {}/{} err_left = {:.6f}, err_right = {:.6f}, \
-				total_loss={:.6f}, 1 epoch time ={:.6f}, left time={:.6f}".format(epoch, 
+			logging.debug("epoch = {}/{} err_left = {:.6f}, err_right = {:.6f}, total_loss={:.6f}, 1 epoch time ={:.6f}, left time={:.6f}".format(epoch, 
 				num_epochs+start_epoch, left_loss, right_loss, t_loss, ava_epoch_time, left_time))
 
 			if t_loss < best_loss:
@@ -327,7 +327,7 @@ if __name__ == "__main__":
 	arg_parser.add_argument(
 		"--leaky",
 		dest="leaky",
-		action="store_false",
+		action="store_true",
 		help="soft min max",
 	)
 	arg_parser.add_argument(

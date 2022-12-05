@@ -164,7 +164,7 @@ def create_cad_mesh(generator, primitives, connection_t, filename, file_type='of
 	c_dim=64, N=128, max_batch=32 ** 3, shape_repair_flag=False, inter_results_flag=False, final_result_flag=False, primi_count_only_flag=False):
 	start_time = time.time()
 	ply_filename = filename
-	connection_t = connection_t.unsqueeze(0)
+	connection_t = connection_t.detach().unsqueeze(0)
 	primitives = primitives.detach().cpu().numpy()
 
 	if not os.path.isdir(ply_filename):
