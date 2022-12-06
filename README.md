@@ -15,13 +15,13 @@ Tested environment: please check environment.yml file
 ## News
 ***Sep 22, 2022.*** Update additional files for testing pre-trained model. Note the pre-trained results are much worse than fine-tuned results.
 
-***Aug 11, 2022.*** More [processed data](https://drive.google.com/file/d/1rANlqwGGBqY5Ih0GHhAd3VG_SZlhhOmi/view?usp=sharing) and [pre-trained weights](https://drive.google.com/file/d/1RU1IY_HOHDhc9APb9r4GcsxZkiwmJkCc/view?usp=sharing) are provided.
+***Aug 11, 2022.*** More [processed data](https://drive.google.com/file/d/1rANlqwGGBqY5Ih0GHhAd3VG_SZlhhOmi/view?usp=sharing) and [pre-trained weights](https://drive.google.com/file/d/1RU1IY_HOHDhc9APb9r4GcsxZkiwmJkCc/view?usp=sharing) of shapenet are provided.
 
 ## Datasets and Pre-trained weights
 
 Point sampling methods are adopted from [IM-Net](https://github.com/czq142857/IM-NET) and [If-Net](https://github.com/jchibane/if-net)
 
-Please download processed data from [here](https://drive.google.com/file/d/1fvuTvW5uKIUq3OF9Ybp3mwnjOPvtQRVC/view?usp=sharing) and pre-trained weights from [here](https://drive.google.com/drive/folders/1Mh5ngnlhi1OqNh0DG1KpZhAQKn5dNa7M?usp=sharing).
+Please download ABC processed data from [here](https://drive.google.com/file/d/1DqyZw8zpCiEJMSYp6J6IocMB_IYMwYL1/view?usp=share_link) and pre-trained weights from [here](https://drive.google.com/drive/folders/1Mh5ngnlhi1OqNh0DG1KpZhAQKn5dNa7M?usp=sharing).
 
 The config file spec.json needs to placed in the folder of each experiment.
 
